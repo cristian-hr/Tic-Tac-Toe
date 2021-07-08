@@ -1,10 +1,46 @@
 .contBoard {
-    margin: 0 auto;
-    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boardNavBar {
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+    padding-top: 10px;
+}
+
+.roomIdBoard {
+    color: white;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    height: 60px;
+    font-size: 40px;
+    align-items: center;
+    padding: 5px 20px;
+    border-radius: 20px;
+    background-color: rgb(0, 125, 163);
+}
+
+.backToHome {
+    color: white;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-decoration: none;
+    height: 60px;
+    font-size: 40px;
+    align-items: center;
+    padding: 5px 20px;
+    border-radius: 20px;
+    background-color: rgb(0, 77, 100);
 }
 
 .firstRow {
-    display: flex;    
+    display: flex;  
+    padding-top: 15px;  
 }
 
 .secondRow {
@@ -22,7 +58,7 @@ button {
 }
 
 .resetButtonDiv {
-    margin-bottom: 20px
+    margin-top: 20px
 }
 
 .resetButton {
@@ -30,4 +66,21 @@ button {
     font-size: 20px;
     color: white;
     background-color: rgb(43, 156, 39);
+}
+
+@media (max-width: 455px) {
+    .roomIdBoard {
+        font-size: 28px;
+        padding: 0 15px;
+    }
+    .boardNavBar {
+        width: 300px;        
+    }
+    .backToHome {
+        font-size: 28px;
+        padding: 0 15px;
+    }
+    .firstRow { 
+        padding-top: 5px;  
+    }
 }

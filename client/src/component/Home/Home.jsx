@@ -13,16 +13,25 @@ function Home() {
 
     return (
         <div className="home-container">
-            <input
-                type="text"
-                placeholder="Room"
-                value={roomName}
-                onChange={handleRoomNameChange}
-                className="text-input-field"
-            />
-            <Link to={`/${roomName}`} className="enter-room-button">
-                Join room
-            </Link>
+            <div className="homeTitle">
+                <b>Tic Tac Toe</b>
+            </div>
+            <div className="homeInstru">
+                <p>To start, create or join a room by writing the name of the room</p>
+            </div>
+            <div className="homeInput">
+                <input
+                    type="text"
+                    placeholder="Room"
+                    value={roomName}
+                    onChange={handleRoomNameChange}
+                    className="text-input-field"
+                />
+                <Link to={`/${roomName}`} className="enter-room-button">
+                    Join room
+                </Link>
+            </div>
+
         </div>
     );
 };

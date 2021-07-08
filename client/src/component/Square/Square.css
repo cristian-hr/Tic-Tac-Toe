@@ -1,17 +1,21 @@
 .square {
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 70px;
-    width: 100px;
-    height: 100px;
+    font-size: 100px;
+    width: 150px;
+    height: 150px;
     border-style: solid;
     border-width: 2px;
     border-color: black;
-    background-color: rgb(53, 223, 223);
+    background-color: rgb(25, 126, 101);
 }
 
-/* .squareData {
-    align-content: center;
-    text-align: center;
-} */
+@media (max-width:455px) {
+    .square {
+        width: 100px;
+        height: 100px;
+        font-size: 70px;
+    }
+}

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Square from '../Square/Square';
 import usePlays from "../../services/usePlays";
 import Swal from "sweetalert2";
@@ -95,18 +96,18 @@ function Board(props) {
                 cancelButtonColor: '#008500',
             })
                 .then((result) => {
-                    if (result.isDismissed) {                        
+                    if (result.isDismissed) {
                         sendPlay({ turn: "X", plays: [] })
                     }
                 })
                 .catch((error) => {
                     console.error(error)
-                })                        
+                })
         }
         else if (player.won === "tie") {
             setPlayer({ mark: "", won: false })
             Swal.fire({
-                title: `XO tie`,
+                title: `Tie`,
                 icon: "success",
                 confirmButtonColor: '#353535',
                 showCancelButton: true,
@@ -119,13 +120,13 @@ function Board(props) {
                     }
                 })
                 .then(() => {
-                    if(!play.plays[0]) Swal.close()
+                    if (!play.plays[0]) Swal.close()
                 })
                 .catch((error) => {
                     console.error(error)
                 })
         }
-        if(!play.plays[0]) Swal.close()     
+        if (!play.plays[0]) Swal.close()
         // eslint-disable-next-line
     }, [player, play])
 
@@ -153,8 +154,13 @@ function Board(props) {
 
     return (
         <div className="contBoard">
-            <div className="resetButtonDiv">
-                <button className="resetButton" onClick={reset}>Reset</button>
+            <div className="boardNavBar">
+                <div className="roomIdBoard">
+                    <span>Room: <b>{roomId}</b></span>
+                </div>
+                <Link to={`/`} className="backToHome">
+                    Home
+                </Link>
             </div>
             <div className="firstRow">
                 <button onClick={(e) => handleClick(e, "1a")}>
@@ -188,6 +194,9 @@ function Board(props) {
                 <button onClick={(e) => handleClick(e, "3c")}>
                     <Square data={play.plays.find(p => p.coord === "3c") ? play.plays.find(p => p.coord === "3c").mark : ""} />
                 </button>
+            </div>
+            <div className="resetButtonDiv">
+                <button className="resetButton" onClick={reset}>Reset</button>
             </div>
         </div>
     )
