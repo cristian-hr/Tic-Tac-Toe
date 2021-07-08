@@ -1,0 +1,33 @@
+.contBoard {
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.firstRow {
+    display: flex;    
+}
+
+.secondRow {
+    display: flex;    
+}
+
+.thirdRow {
+    display: flex;    
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    padding: 0;
+}
+
+.resetButtonDiv {
+    margin-bottom: 20px
+}
+
+.resetButton {
+    padding: 10px 20px;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(43, 156, 39);
+}

@@ -1,0 +1,35 @@
+.home-container {
+    /* position: fixed; */
+    /* left: 10%;
+    right: 10%; */
+    /* top: 50%;
+    transform: translate(0, -50%); */
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.text-input-field {
+    width: 200px;
+    padding: 24px 12px;
+    border-radius: 7px;
+    font-size: 24px;
+}
+
+.text-input-field:focus {
+    width: 200px;
+    outline: none;
+}
+
+.enter-room-button {
+    width: 200px;
+    margin-top: 20px;
+    padding: 24px 12px;
+    font-size: 28px;
+    background: #31a24c;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 7px;
+}
