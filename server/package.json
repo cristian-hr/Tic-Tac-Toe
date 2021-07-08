@@ -2,7 +2,7 @@
   "name": "elgatoback",
   "description": "",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js"
   },
   "main": "index.js",
   "dependencies": {
