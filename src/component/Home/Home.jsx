@@ -17,7 +17,7 @@ function Home() {
                 <b>Tic Tac Toe</b>
             </div>
             <div className="homeInstru">
-                <p>To start, create or join a room by writing the NUMBER of the room</p>
+                <p>To start, create or join a room by writing the name or the number of the room</p>
             </div>
             <div className="homeInput">
                 <input
