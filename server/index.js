@@ -1,4 +1,3 @@
-const functions = require("firebase-functions");
 const express = require("express");
 const http = require("http");
 const socketIo = require("socket.io")
@@ -35,5 +34,3 @@ io.on("connection", (socket) => {
 server.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`)
 })
-
-exports.tictactoe_back = functions.https.onRequest(server)
