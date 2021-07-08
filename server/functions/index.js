@@ -1,3 +1,4 @@
+const functions = require("firebase-functions");
 const express = require("express");
 const http = require("http");
 const socketIo = require("socket.io")
@@ -9,7 +10,6 @@ const io = socketIo(server, {
         origin: "*"
     },    
 })
-
 
 const PORT = 4000;
 const NEW_CHAT_MESSAGE_EVENT = "newChatMessage"
@@ -35,3 +35,5 @@ io.on("connection", (socket) => {
 server.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`)
 })
+
+exports.tictactoe_back = functions.https.onRequest(server)
