@@ -10,7 +10,7 @@ const io = socketIo(server, {
     },    
 })
 
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 const NEW_CHAT_MESSAGE_EVENT = "newChatMessage"
 
 io.on("connection", (socket) => {
@@ -30,6 +30,8 @@ io.on("connection", (socket) => {
     })
 
 })
+
+setInterval(() => io.emit('time', new Date().toTimeString()), 1000);
 
 server.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`)

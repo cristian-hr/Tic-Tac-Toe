@@ -1,6 +1,9 @@
 {
   "name": "elgatoback",
   "description": "",
+  "engines": {
+    "node": "12.17.x"
+  },
   "scripts": {
     "start": "node index.js"
   },
