@@ -5,12 +5,11 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App">      
       <BrowserRouter>
         <Route exact path="/" component={Home}></Route>
         <Route path="/:roomId" component={Board}></Route>
       </BrowserRouter>
-      
     </div>
   );
 }

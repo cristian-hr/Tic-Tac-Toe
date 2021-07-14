@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     font-size: 100px;
-    color: rgb(0, 92, 92);
+    color: rgb(235, 235, 235);
 }
 
 .homeInstru {
@@ -17,12 +17,14 @@
     margin: 0 auto;
     width: 90%;
     font-size: 35px;
+    color: rgb(235, 235, 235);
 }
 
 .homeInput {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 30px;
 }
 
 .text-input-field {
@@ -30,9 +32,10 @@
     padding: 24px 12px;
     border-radius: 7px;
     font-size: 24px;
+    text-align: center;
 }
 
-.text-input-field:focus {
+.text-input-field:focus {    
     width: 200px;
     outline: none;
 }
@@ -42,7 +45,7 @@
     margin-top: 20px;
     padding: 24px 12px;
     font-size: 28px;
-    background: #31a24c;
+    background: #202020;
     color: white;
     font-weight: 600;
     text-align: center;

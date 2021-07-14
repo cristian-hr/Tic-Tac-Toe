@@ -167,7 +167,7 @@ function Board(props) {
                     <Square data={play.plays.find(p => p.coord === "1a") ? play.plays.find(p => p.coord === "1a").mark : ""} />
                 </button>
                 <button onClick={(e) => handleClick(e, "1b")}>
-                    <Square data={play.plays.find(p => p.coord === "1b") ? play.plays.find(p => p.coord === "1b").mark : ""} />
+                    <Square p={"tc"} data={play.plays.find(p => p.coord === "1b") ? play.plays.find(p => p.coord === "1b").mark : ""} />
                 </button>
                 <button onClick={(e) => handleClick(e, "1c")}>
                     <Square data={play.plays.find(p => p.coord === "1c") ? play.plays.find(p => p.coord === "1c").mark : ""} />
@@ -175,13 +175,13 @@ function Board(props) {
             </div>
             <div className="secondRow">
                 <button onClick={(e) => handleClick(e, "2a")}>
-                    <Square data={play.plays.find(p => p.coord === "2a") ? play.plays.find(p => p.coord === "2a").mark : ""} />
+                    <Square p={"lc"} data={play.plays.find(p => p.coord === "2a") ? play.plays.find(p => p.coord === "2a").mark : ""} />
                 </button>
                 <button onClick={(e) => handleClick(e, "2b")}>
-                    <Square data={play.plays.find(p => p.coord === "2b") ? play.plays.find(p => p.coord === "2b").mark : ""} />
+                    <Square p={"cc"} data={play.plays.find(p => p.coord === "2b") ? play.plays.find(p => p.coord === "2b").mark : ""} />
                 </button>
                 <button onClick={(e) => handleClick(e, "2c")}>
-                    <Square data={play.plays.find(p => p.coord === "2c") ? play.plays.find(p => p.coord === "2c").mark : ""} />
+                    <Square p={"rc"} data={play.plays.find(p => p.coord === "2c") ? play.plays.find(p => p.coord === "2c").mark : ""} />
                 </button>
             </div>
             <div className="thirdRow">
@@ -189,7 +189,7 @@ function Board(props) {
                     <Square data={play.plays.find(p => p.coord === "3a") ? play.plays.find(p => p.coord === "3a").mark : ""} />
                 </button>
                 <button onClick={(e) => handleClick(e, "3b")}>
-                    <Square data={play.plays.find(p => p.coord === "3b") ? play.plays.find(p => p.coord === "3b").mark : ""} />
+                    <Square p={"bc"} data={play.plays.find(p => p.coord === "3b") ? play.plays.find(p => p.coord === "3b").mark : ""} />
                 </button>
                 <button onClick={(e) => handleClick(e, "3c")}>
                     <Square data={play.plays.find(p => p.coord === "3c") ? play.plays.find(p => p.coord === "3c").mark : ""} />

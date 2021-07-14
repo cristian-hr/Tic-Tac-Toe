@@ -2,7 +2,11 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-color: rgb(240, 240, 240);
+  background: rgb(25,31,82);
+  background: 
+  linear-gradient(50deg, rgba(25,31,82,0.8) 0%, rgba(38,102,100,0.8) 50%, rgba(40,176,142,1) 100%),
+  url("../images/kitty-png.png") no-repeat center left;  
+  background-size: 800px cover;
 }
 
 .App-logo {
@@ -13,6 +17,16 @@
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@media (max-width: 455px) {
+  .App {
+    background: rgb(25,31,82);
+    background: 
+    linear-gradient(50deg, rgba(25,31,82,0.8) 0%, rgba(38,102,100,0.8) 50%, rgba(40,176,142,1) 100%),
+    url("../images/kitty-png.png") no-repeat bottom left;  
+    background-size: contain;
   }
 }
 

@@ -26,6 +26,7 @@ function Home() {
                     value={roomName}
                     onChange={handleRoomNameChange}
                     className="text-input-field"
+                    required
                 />
                 <Link to={`/${roomName}`} className="enter-room-button">
                     Join room
