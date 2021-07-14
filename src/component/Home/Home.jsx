@@ -1,15 +1,21 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 import "./Home.css";
 
 function Home() {
 
     const [roomName, setRoomName] = useState("");
+    const history = useHistory()
 
     const handleRoomNameChange = (event) => {
         setRoomName(event.target.value);
     };
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        history.push(`/${roomName}`)
+    }
 
     return (
         <div className="home-container">
@@ -20,19 +26,18 @@ function Home() {
                 <p>To start, create or join a room by writing the name or the number of the room</p>
             </div>
             <div className="homeInput">
-                <input
-                    type="text"
-                    placeholder="Room"
-                    value={roomName}
-                    onChange={handleRoomNameChange}
-                    className="text-input-field"
-                    required
-                />
-                <Link to={`/${roomName}`} className="enter-room-button">
-                    Join room
-                </Link>
+                <form className="homeForm" action="" onSubmit={handleSubmit}>
+                    <input
+                        type="text"
+                        placeholder="Room"
+                        value={roomName}
+                        onChange={handleRoomNameChange}
+                        className="text-input-field"
+                        required
+                    />
+                    <input className="enter-room-button" type="submit" onSubmit={handleSubmit} value="Join room"/>
+                </form>
             </div>
-
         </div>
     );
 };
